@@ -1,4 +1,4 @@
-# CarND-Semantic-Segmentation-Project - Jose C. Marti
+# CarND-Capstone-Project - Jose C. Marti
 ## Self-Driving Car Engineer Nanodegree Program.
 
 ### Overview
@@ -24,7 +24,7 @@ I used TensorFlow Object Detection API. This is an open source framework built o
 This node finally calculates throttle, brake and steering angle to follow longitudinal and lateral trajectory simultaneously. The throttle, brake and steering angle is calculated within this node. A PID controller was used to calculate throttle and brake based on the difference between the current velocity and the target velocity. another PID controller was also used based on cross-track error to calculate the appropriate steering angle.
 
 ### Conclusions
-I had many issues during compilation. The folder /home/workspace/CarND-Capstone/ros/src/dbw_mkz_msgs to be included in your project in order not to have the following error:
+I had many issues during compilation. The folder `/home/workspace/CarND-Capstone/ros/src/dbw_mkz_msgs`has to be included in your project in order to avoid the following error:
 
 ```
 Make Warning at /opt/ros/kinetic/share/catkin/cmake/catkinConfig.cmake:76 (find_package):
@@ -32,15 +32,18 @@ Could not find a package configuration file provided by "dbw_mkz_msgs" with any 
     dbw_mkz_msgsConfig.cmake
     dbw_mkz_msgs-config.cmake
 ```
+
 In addition to that, the following error appeared:
 ```
 File "/opt/ros/kinetic/lib/python2.7/dist-packages/catkin/terminal_color.py", line 2, in <module> from catkin_pkg.terminal_color import *  # noqa
 ImportError: No module named terminal_color
 ```
-apparently the ```terminal_color.py``` file was not in the correct location. So, after googling for a while I found a couple of forums where it was explained that the Python module in question has recently been moved from ```catkin``` into ```catkin_pkg``` and recommended to copy the content of [this file](https://github.com/ros-infrastructure/catkin_pkg/blob/master/src/catkin_pkg/terminal_color.py#L119) in to the abovementioned ```terminal color.py``` file in order to get the compilation working.
+
+Apparently the ```terminal_color.py``` file was not in the correct location. So, after googling for a while I found a couple of forums where it was explained that the Python module in question has recently been moved from ```catkin``` into ```catkin_pkg``` and recommended to copy the content of [this file](https://github.com/ros-infrastructure/catkin_pkg/blob/master/src/catkin_pkg/terminal_color.py#L119) in to the abovementioned ```terminal color.py``` file in order to get the compilation working.
 
 * https://answers.ros.org/question/294780/ubuntu18-and-ros-melodic-catkin-error-importerror-no-module-named-terminal_color/
 * https://answers.ros.org/question/301702/ros-kinetic-importerror-no-module-named-terminal_color/?answer=301712#post-id-301712
+
 
 Finally, I also noticed that even in the Workspace with GPU from Udacity the refresh rate in the simulator when the camera is activated is low so, I decided to change the code in bridge.py to configure the camera to send only a frame every 6 to reduce latency.
 
@@ -62,7 +65,8 @@ _(Thanks to Aleksandr Likhterman)_
 
 In my personal opinion, this has been the most complex project along all the course, not only due to the complexity of the system to implement, but also due to the fact that a new operating system (ROS) is used, and high HW requirements are needed to smoothly test the result in the simulator. Thankfully we have the Walkthroughs and the support of the community that help us to get ideas and move forward every time we get stuck in the project. 
 
-Finally, I would like to remark that ROS has been a surprising discovery for me and with no doubt I am going to continue reading and learning in order to integrate it in my hobby future projects.
+I would like to remark that ROS has been a surprising discovery for me and with no doubt I am going to continue reading and learning in order to integrate it in my hobby future projects.
+
 
 J.Marti
 
@@ -83,7 +87,7 @@ J.Marti
 
 
 
-
+________
 -------------------
 
 
