@@ -58,7 +58,7 @@ Finally, I also noticed that even in the Workspace with GPU from Udacity the ref
         self.n += 1
         self.n = self.n % EVERY_NTH_IMAGE
  ```
-(Thanks to Aleksandr Likhterman)
+_(Thanks to Aleksandr Likhterman)_
 
 In my personal opinion, this has been the most complex project along all the course, not only due to the complexity of the system to implement, but also due to the fact that a new operating system (ROS) is used, and high HW requirements are needed to smoothly test the result in the simulator. Thankfully we have the Walkthroughs and the support of the community that help us to get ideas and move forward every time we get stuck in the project. 
 
