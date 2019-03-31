@@ -8,7 +8,7 @@ This is the final project of the Self-Driving Car Engineer Nanodegree Program. T
 The project introduces us into the ROS operating system. The project is considered to include all the accumulated knowledge during the 3 terms of the Nanodegree Program. 
 The goal is to understand and implement the core functionality of an autonomous vehicle system using the Robot Operating System and testing in onto the Udacity Simulator. Unfortunately, I do not expect to test my code in Carla, the real autonomous car from Udacity.
 
-The different nodes
+![pic](final-project-ros-graph-v2.png)
 
 Several nodes have to be updated:
 #### Waypoint Updater Node
