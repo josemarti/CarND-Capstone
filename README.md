@@ -18,7 +18,7 @@ In this node, the obstacles and the traffic lights are considered in order to se
 A crucial part of the vehicle’s self-driving capabilities comes from the ability to detect and classify upcoming traffic lights. 
 This node processes images provided by the vehicle’s onboard camera and publishes upcoming traffic light information to the previous described node. The Waypoint Updater node uses this information to determine when to stop or slow down the car in when facing a red light. 
 Traffic light detection takes a captured image as input and produces the bounding boxes as the output to be fed into the classification model. 
-I used TensorFlow Object Detection API. This is an open source framework built on top of TensorFlow to construct, train and deploy object detection models. A single shot localizer-classifier solution was chosen for the project.
+I used [TensorFlow Object Detection API](https://github.com/tensorflow/models/tree/master/research/object_detection). This is an open source framework built on top of TensorFlow to construct, train and deploy object detection models. A single shot localizer-classifier solution was chosen for the project.
 
 #### DBW (Drive-By-Wire) Node
 This node finally calculates throttle, brake and steering angle to follow longitudinal and lateral trajectory simultaneously. The throttle, brake and steering angle is calculated within this node. A PID controller was used to calculate throttle and brake based on the difference between the current velocity and the target velocity. another PID controller was also used based on cross-track error to calculate the appropriate steering angle.
