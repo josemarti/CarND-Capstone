@@ -23,6 +23,8 @@ I used TensorFlow Object Detection API. This is an open source framework built o
 #### DBW (Drive-By-Wire) Node
 This node finally calculates throttle, brake and steering angle to follow longitudinal and lateral trajectory simultaneously. The throttle, brake and steering angle is calculated within this node. A PID controller was used to calculate throttle and brake based on the difference between the current velocity and the target velocity. another PID controller was also used based on cross-track error to calculate the appropriate steering angle.
 
+![pic](pic2_resize.png)
+
 ### Conclusions
 I had many issues during compilation. The folder `/home/workspace/CarND-Capstone/ros/src/dbw_mkz_msgs`has to be included in your project in order to avoid the following error:
 
